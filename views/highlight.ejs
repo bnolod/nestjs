@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="text">
+        <button id="searchText">
+            Keres
+        </button>
+    </form>
+    <ul>
+        <p><%- quote %></p>
+</body>
+<script>
+    document.getElementById('searchText').addEventListener('click', function(){
+        var search = document.querySelector('input[name="search"]').value;
+        // window.location.href =  search;
+    });
+</script>
+</html>

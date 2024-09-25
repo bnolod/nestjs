@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="text">
+        <button id="searchText">
+            Keres
+        </button>
+    </form>
+    <ul>
+        <% if(typeof data == "string"){ %>
+            <p><%=data%></p>
+        <% } %>
+
+        <% for(var i = 0; i < data.length; i++){ %>
+            <p><%= data[i].quote %></p>
+        <% } %>
+</body>
+<script>
+    document.getElementById('searchText').addEventListener('click', function(){
+        var search = document.querySelector('input[name="search"]').value;
+        window.location.href = '/search?text=' + search;
+    });
+</script>
+</html>
